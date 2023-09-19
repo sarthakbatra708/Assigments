@@ -1,0 +1,12 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    <h1>Employees of Department @ViewBag.dept</h1>
+    @foreach(Employee e in @ViewBag.Emps)
+    {
+        string str = "Employee Id:" + e.EmployeeId + "   Name:" + e.Name + "   Job:" + e.Job + "   Salary:" + e.Salary;
+
+        <li>@str</li>
+    }
+}
